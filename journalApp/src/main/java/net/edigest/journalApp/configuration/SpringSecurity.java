@@ -30,7 +30,7 @@ public class SpringSecurity
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
          http.csrf(cd->cd.disable()).authorizeHttpRequests(request->request
-                 .requestMatchers("/journal/**","/user/**").authenticated().
+                 .requestMatchers("/journal/**","/user/**").permitAll().
                  requestMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest().permitAll()).sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS).maximumSessions(1));
               http.addFilterBefore(jwtFilters, UsernamePasswordAuthenticationFilter.class);

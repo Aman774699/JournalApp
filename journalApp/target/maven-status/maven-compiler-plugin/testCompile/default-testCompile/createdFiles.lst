@@ -1,0 +1,3 @@
+net\edigest\journalApp\JournalAppApplicationTests.class
+net\edigest\journalApp\service\UserServiceTests.class
+net\edigest\journalApp\service\RedisTest.class
