@@ -99,7 +99,6 @@ public class UserController {
     }
 
     @GetMapping("/get/Sentimental")
-
     public  void getuser()
     {
         List<UserEntity> result=userImplRepository.getUserForSA();
