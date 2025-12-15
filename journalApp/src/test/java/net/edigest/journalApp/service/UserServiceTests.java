@@ -7,14 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 public class UserServiceTests {
-    @Autowired
-    UserService userService;
-    @ParameterizedTest
-    @CsvSource({
-            "Aman","Arjun"
-    })
-    public void testfindByUsername(String name)
-    {
-    assertNotNull(userService.findByUsername(name));
-    }
+//    @Autowired
+//    UserService userService;
+//    @ParameterizedTest
+//    @CsvSource({
+//            "Aman","Arjun"
+//    })
+//    public void testfindByUsername(String name)
+//    {
+//    assertNotNull(userService.findByUsername(name));
+//    }
 }

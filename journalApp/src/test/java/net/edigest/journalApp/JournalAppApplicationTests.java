@@ -5,6 +5,7 @@ import net.edigest.journalApp.repository.UserImplRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.List;
 
@@ -13,6 +14,10 @@ class JournalAppApplicationTests {
 
     @Autowired
     UserImplRepository userImplRepository;
+
+    @Autowired
+    RedisTemplate redisTemplate;
+
 	@Test
 	void contextLoads() {
         List<UserEntity>result= userImplRepository.getUserForSA();

@@ -18,6 +18,7 @@ net\edigest\journalApp\filters\JwtFilters.class
 net\edigest\journalApp\configuration\TranscationalConfig.class
 net\edigest\journalApp\configuration\SpringSecurity.class
 net\edigest\journalApp\cachehandler\Cache.class
+net\edigest\journalApp\configuration\RedisStartupChecker.class
 net\edigest\journalApp\entity\APIs.class
 net\edigest\journalApp\scheduler\UserScheduler.class
 net\edigest\journalApp\repository\UserImplRepository.class

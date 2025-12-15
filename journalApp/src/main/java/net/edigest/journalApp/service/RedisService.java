@@ -18,13 +18,17 @@ public class RedisService {
     public  <T>T get(String key, Class<T>entityclass)
     {
         try {
-            Object o = redisTemplate.opsForValue().get(key);
+            String jsonValue = (String) redisTemplate.opsForValue().get(key);
+
+            if (jsonValue == null) {
+                return null;
+            }
+
             ObjectMapper objectMapper = new ObjectMapper();
-            return objectMapper.readValue(o.toString(), entityclass);
-        }
-        catch (Exception e)
-        {
-            log.error("Exception in getting the value",e);
+            return objectMapper.readValue(jsonValue, entityclass);
+
+        } catch (Exception e) {
+            log.error("Exception in getting the value", e);
             return null;
         }
     }
